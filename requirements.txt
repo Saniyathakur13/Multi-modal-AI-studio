@@ -1,0 +1,11 @@
+langgraph
+langchain-groq
+langchain-core
+tavily-python
+chromadb
+sentence-transformers
+streamlit
+python-dotenv
+requests
+edge-tts
+pillow

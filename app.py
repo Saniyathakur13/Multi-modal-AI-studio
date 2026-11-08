@@ -7,6 +7,15 @@ from multimedia_agent.graph import app as media_app
 from multimedia_agent.nodes import image_studio
 
 st.set_page_config(page_title="AI Studio", page_icon="🤖", layout="wide")
+
+# --- LOAD CUSTOM CSS ---
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+# Load the CSS file (make sure style.css is in the same folder as app.py)
+local_css("style.css")
+
 st.title("🤖 Multi-Modal AI Studio")
 st.markdown("*A production-grade AI platform featuring RAG, Multi-Agent workflows, and Audio Synthesis.*")
 

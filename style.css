@@ -1,0 +1,124 @@
+/* style.css */
+
+/* 1. Import a modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+/* 2. Apply font and background to the whole app */
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+}
+
+.stApp {
+    background: linear-gradient(135deg, #7db6f4 0%, #89d2f9 50%, #a3c7f9 100%);
+    color: #ffffff;
+}
+
+/* 3. Style the Main Title with a glowing gradient text */
+h1 {
+    background: -webkit-linear-gradient(45deg, #3f5d7d, #888df5);
+        -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* 4. Glassmorphism for the Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 50px;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 10px;
+    color: #b3b3b3;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(90deg, #8866df, #c4d5d5) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(252, 0, 255, 0.4);
+}
+
+/* 5. Style the Buttons */
+.stButton > button {
+    background: linear-gradient(90deg, #8866df 0%, #9da8ae 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(252, 0, 255, 0.4);
+    color: white;
+}
+
+/* 6. Style the Text Inputs */
+.stTextInput > div > div > input {
+    background-color: rgba(205, 225, 239, 0.882);
+    color: rgb(19, 19, 30);
+    border: 1px solid rgba(255, 255, 255, 0.86);
+    border-radius: 8px;
+}
+
+/* 7. Style the expanders (Sources) */
+.streamlit-expanderHeader {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: #00dbde;
+}
+
+/* 8. Animations for images */
+img {
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+/* 9. Fix ALL text colors for readability */
+.stMarkdown, .stMarkdown p, .stMarkdown li, .stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
+    color: #1E1E1E !important; /* Dark slate color */
+}
+
+/* Make links pop */
+.stMarkdown a {
+    color: #0066cc !important; 
+    text-decoration: underline;
+}
+
+/* Fix the text inside the Expander (Sources) */
+[data-testid="stExpander"] details summary p,
+[data-testid="stExpander"] details summary span {
+    color: #5882ca !important; /* Force dark text */
+    font-weight: 600;
+}
+
+/* Style the expander container itself so it stands out */
+[data-testid="stExpander"] {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px;
+}

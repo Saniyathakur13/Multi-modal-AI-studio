@@ -17,7 +17,7 @@ Built using **LangGraph** to orchestrate a stateful multi-agent workflow:
 *   **LLM:** Groq (Llama 3)
 *   **Vector DB:** ChromaDB, HuggingFace Embeddings
 *   **APIs:** Tavily (Search), Cloudflare (Image), Edge TTS (Audio)
-*   **Frontend:** Streamlit
+*   **Frontend:** Streamlit + Custon CSS
 
 ## 💻 Local Setup
 1. Clone the repo: `git clone https://github.com/YOUR_USERNAME/AutoResearch-Agent.git`

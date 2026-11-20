@@ -1,0 +1,12 @@
+name: Keep Streamlit App Awake
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Runs every 6 hours
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Streamlit App
+        run: curl -s -o /dev/null -w "%{http_code}\n" https://multi-modal-ai-studio-ygzdttxkduvvhthpd34jbx.streamlit.app/

@@ -1,4 +1,4 @@
-name: Keep Streamlit App Awake
+name: Keep Streamlit Apps Awake
 on:
   schedule:
     - cron: '0 */6 * * *' # Runs every 6 hours
@@ -8,5 +8,8 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Streamlit App
+      - name: Ping App 1 (Studio)
         run: curl -s -o /dev/null -w "%{http_code}\n" https://multi-modal-ai-studio-ygzdttxkduvvhthpd34jbx.streamlit.app/
+        
+      - name: Ping App 2 (Agent)
+        run: curl -s -o /dev/null -w "%{http_code}\n" https://multi-modal-ai-agent-tqsusyxkx8so7cfgvzj9jq.streamlit.app/
